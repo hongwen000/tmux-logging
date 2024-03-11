@@ -7,6 +7,8 @@ source "$CURRENT_DIR/scripts/shared.sh"
 
 
 main() {
+	tmux bind-key "$clear_all_panes_history_key" run-shell "$CURRENT_DIR/scripts/clear_all_panes_history.sh"
+	tmux bind-key "$save_all_panes_history_key" run-shell "$CURRENT_DIR/scripts/save_all_panes_history.sh"
 	tmux bind-key "$logging_key" run-shell "$CURRENT_DIR/scripts/toggle_logging.sh"
 	tmux bind-key "$pane_screen_capture_key" run-shell "$CURRENT_DIR/scripts/screen_capture.sh"
 	tmux bind-key "$save_complete_history_key" run-shell "$CURRENT_DIR/scripts/save_complete_history.sh"
